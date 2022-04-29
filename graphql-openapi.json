@@ -1,0 +1,62 @@
+{
+  "openapi": "2.0.0",
+  "info": {
+    "title": "Not specified",
+    "license": {
+      "name": "Not specified"
+    },
+    "version": "Not specified"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "paths": {
+    "/scalarQuery": {
+      "get": {
+        "parameters": [
+          {
+            "name": "input",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "otherInput",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "arrayOfStrings": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "nullable": false
+                      },
+                      "description": "An array of strings",
+                      "nullable": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
